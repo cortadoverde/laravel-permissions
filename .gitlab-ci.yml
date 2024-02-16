@@ -3,8 +3,8 @@ empaquetar:
   before_script:
     - apk add --update zip curl
   script:
-    - zip -r laravel-permissions.zip .
+    - zip -r content.zip .
     - 'curl 
         --header "JOB-TOKEN: $CI_JOB_TOKEN"
-        --upload-file laravel-permissions.zip
-        "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/1.0.0/laravel-permissions.zip"'
+        --upload-file content.zip
+        "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/generic/Content/1.0.0/content.zip"'
