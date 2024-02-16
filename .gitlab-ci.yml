@@ -1,0 +1,6 @@
+zip_build:
+  script:
+    - zip -r laravel-permissions.zip .
+  artifacts:
+    paths:
+      - laravel-permissions.zip
