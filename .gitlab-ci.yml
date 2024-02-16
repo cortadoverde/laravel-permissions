@@ -1,10 +1,10 @@
-zip_build:
+empaquetar:
   image: alpine
   before_script:
-    - apk add --update zip
+    - apk add --update zip curl
   script:
-    - zip -r laravel-permissions.zip .
-  artifacts:
-    paths:
-      - laravel-permissions.zip
-    when: on_success
+    - zip -r laravel-permissions.zip folder1 folder2
+    - 'curl 
+        --header "JOB-TOKEN: $CI_JOB_TOKEN"
+        --upload-file laravel-permissions.zip
+        "${CI_API_V4_URL}/projects/${CI_PROJECT_ID}/packages/1.0.0/laravel-permissions.zip"
