@@ -1,6 +1,10 @@
 zip_build:
+  image: alpine
+  before_script:
+    - apk add --update zip
   script:
     - zip -r laravel-permissions.zip .
   artifacts:
     paths:
       - laravel-permissions.zip
+    when: on_success
