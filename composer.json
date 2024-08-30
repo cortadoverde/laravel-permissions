@@ -1,12 +1,12 @@
 {
-  "name": "a2consultores/laravel-permissions",
+  "name": "8ball-ar/laravel-permissions",
   "description": "Roles and Permissions for Laravel users",
   "keywords": [
     "roles",
     "users",
     "permissions"
   ],
-  "homepage": "https://github.com/a2consultores/laravel-permissions",
+  "homepage": "https://github.com/8ball-ar/laravel-permissions",
   "license": "MIT",
   "authors": [
     {
